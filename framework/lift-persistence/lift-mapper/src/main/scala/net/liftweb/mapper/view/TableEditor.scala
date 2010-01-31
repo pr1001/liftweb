@@ -230,7 +230,7 @@ trait ItemsListEditor[T<:Mapper[T]] {
              bind("item", customBind(i)(ns),
                   "fields" -> eachField(
                     i,
-                    {f: MappedField[_,T] => Seq("form" -> <strike>{f.toString}</strike>)},
+                    {f: MappedField[_,T] => Seq("form" -> <strike>{f.asHtml}</strike>)},
                     fieldFilter
                   ),
                   "removeBtn" -> NodeSeq.Empty,
